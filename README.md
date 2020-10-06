@@ -1,10 +1,10 @@
 # python_mobile_app
 
-This project will demonstrate how to use kivy to develop a cross platform mobile app written in python.
+This project will demonstrate how to use kivy to develop a cross platform mobile app written in Python.
 
 # Motivation
 
-Its something to do I guess.
+It's something to do I guess.
 
 # Demo
 
@@ -27,14 +27,16 @@ https://github.com/pyenv/pyenv
 ```
 
 # Libraries/Technologies Used
+
 * [Kivy](https://kivy.org/#home)
 Used to build the mobile application user interface (cross plaform mobile application development library).
 * [Invoke](http://www.pyinvoke.org/)
 Used to run and define repetitive tasks.
 
 
-# Setup project (for modification)
+# Setup Project (use for modification of the app only)
 
+TODO
 
 # Deploy to iPhone
 
@@ -42,4 +44,4 @@ TODO
 
 # Deploy to Android
 
-#TODO
+TODO
