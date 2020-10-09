@@ -36,7 +36,16 @@ Used to run and define repetitive tasks.
 
 # Setup Project (use for modification of the app only)
 
-TODO
+Pipenv install -r requirements.txt
+kivy.angle is not required for mac os . Install ffpyplayer
+See install step help here:
+https://kivy.org/doc/stable/installation/installation-osx.html
+
+Once garden in installed then instal some widgets with garden.
+
+garden install --kivy iconfonts -> install the package (inconfonts) inside the kivy installation.
+
+
 
 # Deploy to iPhone
 
@@ -45,3 +54,6 @@ TODO
 # Deploy to Android
 
 TODO
+
+
+#

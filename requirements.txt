@@ -1,0 +1,6 @@
+invoke==1.4.1
+Cython==0.29.10
+kivy
+kivy-garden
+buildozer
+ffpyplayer
