@@ -3,7 +3,8 @@ from kivy.garden.iconfonts import register
 
 from os.path import dirname, join
 
-fonts_dir = join(dirname(__file__), 'app/assets/fonts/Material.Design-Iconic.ttf')
+
+fonts_dir = join(dirname(__file__), 'app/assets/fonts/Material-Design-Iconic-Font.ttf')
 zmd_file = join(dirname(__file__), 'app/assets/fonts/zmd.fontd')
 
 if __name__ == '__main__':

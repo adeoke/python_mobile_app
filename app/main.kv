@@ -1,4 +1,160 @@
 #: import rgba kivy.utils.rgba
+#: import icon kivy.garden.iconfonts.icon
+#: import mtx kivy.metrics
 
 <MainWindow>:
- 
+  orientation: 'vertical'
+  canvas.before:
+    Color:
+      rgba: [1,1,1,1]
+    Rectangle:
+      pos: self.pos
+      size: self.size
+  ScreenManager:
+    id: scrn_mngr
+    Screen:
+      name: 'scrn_signin'
+      BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+          Color:
+            rgba: rgba('#0e1574ff')
+          Triangle:
+            points: [0, self.size[1], self.size[0], self.size[1], 0, self.size[1] - (.4*self.size[1])]
+          Color:
+            rgba: rgba('#0e1574c8')
+          Triangle:
+            points: [0, self.size[1], self.size[0], self.size[1], self.size[0], self.size[1] - (.4*self.size[1])]
+        Widget:
+          size_hint_y: .25
+        Label:
+          text: '%s'%icon('zmdi-account-circle')
+          font_size: mtx.sp('154')
+          markup: True
+          color: rgba('#0e1574ff')
+          size_hint_y: .3
+        BoxLayout:
+          size_hint_y: .45
+          orientation: 'vertical'
+          padding: [mtx.dp(20), 0]
+          FlatInput:
+            id: si_username
+            hint_text: 'username'
+            size_hint_y: .1
+          Widget:
+            size_hint_y: .1
+          FlatInput:
+            id: si_password
+            hint_text: 'password'
+            password: True
+            size_hint_y: .1
+          Widget:
+            size_hint_y: .3
+          FlatButton:
+            text: 'Sign In'
+            size_hint_y: .2
+            canvas.before:
+              Color:
+                rgba: rgba('#0e1574ff')
+              RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [10]
+          FlatButton:
+            text: 'New here?Sign Up'
+            color: rgba('#0e1574ff')
+            size_hint_y: .1
+            on_release: scrn_mngr.current = 'scrn_signup'
+          Widget:
+            size_hint_y: .1
+        # Button:
+        #   text: 'Go To Signup'
+        #   on_release: scrn_mngr.current = 'scrn_signup'
+    Screen:
+      name: 'scrn_signup'
+      BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+          Color:
+            rgba: rgba('#0e1574ff')
+          Rectangle:
+            pos: self.pos
+            size: self.size
+          Color:
+            rgba: rgba('#ffffff')
+          Triangle:
+            points: [0, self.size[1], self.size[0], self.size[1], 0, self.size[1] - (.4*self.size[1])]
+          Color:
+            rgba: rgba('#ffffff')
+          Triangle:
+            points: [0, self.size[1], self.size[0], self.size[1], self.size[0], self.size[1] - (.4*self.size[1])]
+        Widget:
+          size_hint_y: .25
+        Label:
+          text: '%s'%icon('zmdi-account-circle')
+          font_size: mtx.sp('154')
+          markup: True
+          color: rgba('#0e1574ff')
+          size_hint_y: .3
+        BoxLayout:
+          size_hint_y: .45
+          orientation: 'vertical'
+          padding: [mtx.dp(20), 0]
+          FlatInput:
+            id: si_username
+            hint_text: 'username'
+            size_hint_y: .1
+          Widget:
+            size_hint_y: .1
+          FlatInput:
+            id: si_password
+            hint_text: 'password'
+            password: True
+            size_hint_y: .1
+          Widget:
+            size_hint_y: .3
+          FlatButton:
+            text: 'Sign In'
+            size_hint_y: .2
+            canvas.before:
+              Color:
+                rgba: rgba('#ffffff')
+              RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [10]
+          FlatButton:
+            text: 'New here?Sign Up'
+            color: rgba('#ffffff')
+            size_hint_y: .1
+          Widget:
+            size_hint_y: .1
+    Screen:
+      name: 'scrn_main'
+      BoxLayout:
+        orientation: 'vertical'
+        Button:
+          text: 'Go To Today'
+          on_release: scrn_mngr.current = 'scrn_today'
+    Screen:
+      name: 'scrn_today'
+      BoxLayout:
+        orientation: 'vertical'
+        Button:
+          text: 'Go To Signin'
+          on_release: scrn_mngr.current = 'scrn_signin'
+
+<FlatButton@Button>:
+  background_normal: ''
+  background_color: [1,1,1,0]
+
+<FlatInput@TextInput>:
+  background_active: ''
+  background_normal: ''
+  background_color: [1,1,1,0]
+  canvas.before:
+    Color:
+      rgba: rgba('#0e1574ff')
+    Rectangle:
+      pos:self.pos
+      size: [self.size[0], 1]
