@@ -8,7 +8,7 @@ It's something to do I guess.
 
 # Demo
 
-![App Screens](/demo_anim/python_mob_demo.gif)
+![App Screens](/demo_anim/python_mob_app_demo.gif)
 
 # Pre-requisites
 
