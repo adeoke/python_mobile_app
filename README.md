@@ -8,7 +8,7 @@ It's something to do I guess.
 
 # Demo
 
-TODO
+![App Screens](/demo_admin/python_mob_demo.gif.gif)
 
 # Pre-requisites
 
@@ -45,7 +45,15 @@ Once garden in installed then instal some widgets with garden.
 
 garden install --kivy iconfonts -> install the package (inconfonts) inside the kivy installation.
 
+# Run the app locally
 
+On te terminal input:
+
+```console
+$ python main.py --size=320x646 --dpi=96
+```
+
+Which will start the application with that given window size and dots per inch.
 
 # Deploy to iPhone
 
